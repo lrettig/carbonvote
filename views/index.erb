@@ -65,83 +65,20 @@
 
     <div class="box">
       <div>
-        <p class="choice">YES: 0 ≤ reward < 1.5</p>
-        <a class="address" target="_blank" href="http://etherscan.io/address/<%= settings.contract_addresses[:yes_contract_1] %>">
-          <%= settings.contract_addresses[:yes_contract_1] %>
+        <p class="choice">Yes</p>
+        <a class="address" target="_blank" href="http://etherscan.io/address/<%= settings.contract_addresses[:yes_contract] %>">
+          <%= settings.contract_addresses[:yes_contract] %>
         </a>
       </div>
 
       <div class="action">
-        <p class="amount"><%= get_amount(:yes_contract_1).round(4) %> ether</p>
-        <button class="send" data-address="<%= settings.contract_addresses[:yes_contract_1] %>">
+        <p class="amount"><%= get_amount(:yes_contract).round(4) %> ether</p>
+        <button class="send" data-address="<%= settings.contract_addresses[:yes_contract] %>">
           Vote
         </button>
       </div>
     </div>
 
-    <div class="box">
-      <div>
-        <p class="choice">YES: 1.5 ≤ reward < 2</p>
-        <a class="address" target="_blank" href="http://etherscan.io/address/<%= settings.contract_addresses[:yes_contract_2] %>">
-          <%= settings.contract_addresses[:yes_contract_2] %>
-        </a>
-      </div>
-
-      <div class="action">
-        <p class="amount"><%= get_amount(:yes_contract_2).round(4) %> ether</p>
-        <button class="send" data-address="<%= settings.contract_addresses[:yes_contract_2] %>">
-          Vote
-        </button>
-      </div>
-    </div>
-
-    <div class="box">
-      <div>
-        <p class="choice">YES: 2 ≤ reward < 3</p>
-        <a class="address" target="_blank" href="http://etherscan.io/address/<%= settings.contract_addresses[:yes_contract_3] %>">
-          <%= settings.contract_addresses[:yes_contract_3] %>
-        </a>
-      </div>
-
-      <div class="action">
-        <p class="amount"><%= get_amount(:yes_contract_3).round(4) %> ether</p>
-        <button class="send" data-address="<%= settings.contract_addresses[:yes_contract_3] %>">
-          Vote
-        </button>
-      </div>
-    </div>
-
-    <div class="box">
-      <div>
-        <p class="choice">YES: 3 ≤ reward < 4</p>
-        <a class="address" target="_blank" href="http://etherscan.io/address/<%= settings.contract_addresses[:yes_contract_4] %>">
-          <%= settings.contract_addresses[:yes_contract_4] %>
-        </a>
-      </div>
-
-      <div class="action">
-        <p class="amount"><%= get_amount(:yes_contract_4).round(4) %> ether</p>
-        <button class="send" data-address="<%= settings.contract_addresses[:yes_contract_4] %>">
-          Vote
-        </button>
-      </div>
-    </div>
-
-    <div class="box">
-      <div>
-        <p class="choice">YES: reward ≥ 4</p>
-        <a class="address" target="_blank" href="http://etherscan.io/address/<%= settings.contract_addresses[:yes_contract_5] %>">
-          <%= settings.contract_addresses[:yes_contract_5] %>
-        </a>
-      </div>
-
-      <div class="action">
-        <p class="amount"><%= get_amount(:yes_contract_5).round(4) %> ether</p>
-        <button class="send" data-address="<%= settings.contract_addresses[:yes_contract_5] %>">
-          Vote
-        </button>
-      </div>
-    </div>
   </div>
 </section>
 
