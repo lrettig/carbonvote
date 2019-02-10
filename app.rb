@@ -27,18 +27,8 @@ class App < Sinatra::Base
       (redis.get("#{key}-amount") || 0).to_f
     end
 
-    def yes_votes
-      @yes_votes ||= {
-        "0 ≤ reward < 1.5" => get_amount(:yes_contract_1),
-        "1.5 ≤ reward < 2" => get_amount(:yes_contract_2),
-        "2 ≤ reward < 3"   => get_amount(:yes_contract_3),
-        "3 ≤ reward < 4"   => get_amount(:yes_contract_4),
-        "reward ≥ 4"       => get_amount(:yes_contract_5)
-      }
-    end
-
     def yes_vote_amount
-      @yes_vote_amount ||= yes_votes.values.sum.round(4)
+      @yes_vote_amount ||= get_amount(:yes_contract).round(4)
     end
 
     def no_vote_amount
@@ -74,14 +64,10 @@ class App < Sinatra::Base
   end
 
   get '/vote' do
-    yes_drilldown = yes_votes.reduce([]) do |sum, i|
-      sum << [CGI.escape_html(i[0]), i[1], precentage(i[1], yes_vote_amount)]
-    end
-
     json({
       yes_precentage: yes_precentage,
-      yes_drilldown: yes_drilldown,
       no_vote_amount: no_vote_amount,
+      yes_vote_amount: yes_vote_amount,
       no_precentage: no_precentage
     })
   end

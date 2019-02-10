@@ -78,27 +78,15 @@ function renderChart(data) {
     data: {
       labels: [
         'NO',
-        'YES: 0 ≤ reward < 1.5',
-        'YES: 1.5 ≤ reward < 2',
-        'YES: 2 ≤ reward < 3',
-        'YES: 3 ≤ reward < 4',
-        'YES: reward ≥ 4',
+        'YES',
       ],
       datasets: [{
         data: [
           data.no_vote_amount,
-          data.yes_drilldown[0][1],
-          data.yes_drilldown[1][1],
-          data.yes_drilldown[2][1],
-          data.yes_drilldown[3][1],
-          data.yes_drilldown[4][1]
+          data.yes_vote_amount,
         ],
         backgroundColor: [
             "#FFCE56",
-            "#36A2EB",
-            "#36A2EB",
-            "#36A2EB",
-            "#36A2EB",
             "#36A2EB",
         ],
       }],
