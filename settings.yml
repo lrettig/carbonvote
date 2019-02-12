@@ -1,7 +1,7 @@
 ---
 :redis_url: 'redis://localhost:6379/2'
-:start_block_number: 7199702
-:end_block_number: 7240000
+:start_block_number: 7202800
+:end_block_number: 8000000
 :contract_addresses:
   :no_contract: '0x90a3aa83b0da90abe2c33fadbe829cf74dfa59d9'
   :yes_contract: '0x975f4ac23fcc9c39228cc20a2d4897c7b9bb39cc'

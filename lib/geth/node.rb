@@ -22,7 +22,7 @@ module Geth
       {
         name: :balance,
         call: :eth_getBalance,
-        input_formatter: [:format_address, :default_block_option_pending],
+        input_formatter: [:format_address, :number_to_hex],
         output_formatter: :wei_to_ether
       },
       {
