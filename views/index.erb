@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <title>CarbonVote</title>
@@ -158,12 +158,12 @@ Please see the following links for more information on ProgPoW or to join the co
   <div class="inner">
     <div class="item">
       <p class="question">1) Who should vote?</p>
-      <p class="anwser">We believe the legitimate voters should be players who have ether in their wallets.</p>
+      <p class="anwser">Those who hold private keys that control access to ether.</p>
     </div>
 
     <div class="item">
       <p class="question">2) So we are going to count heads?</p>
-      <p class="anwser">No. We are going to count coins, in this case, ether. One vote per ether.</p>
+      <p class="anwser">No. We are going to count ether. One vote per ether you control.</p>
     </div>
 
     <div class="item">
@@ -174,10 +174,13 @@ Please see the following links for more information on ProgPoW or to join the co
         The ether under the from address of the transaction will be considered
         a batch of ballots that support or oppose the proposal. For the transactions to succeed,
         a minimum of 30,000 gas is required.
+        (Note that if you send a transaction with ether, it will fail.
+        If your wallet software does not allow a zero ether transaction, try
+        <a href="https://mycrypto.com/">MyCrypto</a> or <a href="https://www.myetherwallet.com/">MyEtherWallet</a>.)
       </p>
 
       <p class="anwser">
-        <strong>Your ether are safe in your wallets. We won't collect or lock funds.</strong>
+        <strong>Your ether are safe in your account. The vote contract does not collect or lock funds.</strong>
       </p>
     </div>
 
@@ -192,6 +195,15 @@ Please see the following links for more information on ProgPoW or to join the co
         message or move the ETH from the addresses that have participated so as
         to suggest that you are abstaining from the vote as the ETH won't
         be counted as votes anymore.
+      </p>
+    </div>
+
+    <div class="item">
+      <p class="question">5) Can I view the source code?</p>
+      <p class="anwser">
+      Yes, it's all in Github in <a href="https://github.com/lrettig/carbonvote">this repo</a>.
+      Feel free to submit a PR if you find an issue.
+      Vote contract code is <a href="https://github.com/lrettig/carbonvote/blob/master/contract/vote.sol">here</a>.
       </p>
     </div>
   </div>
